@@ -41,13 +41,13 @@ $(document).ready(() => {
 
 		if((arr[0] != '' || arr[0] != null) && (arr[1] == '' || arr[1] == null) && (arr[2] == '' || arr[2] == null)) {
 			
-			URL = `http://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}`;
+			URL = `https://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}`;
 			console.log(URL);
 			getMoviesByTitle(URL);
 
 		} else if((arr[0] == '' || arr[0] == null) && (arr[1] != '' || arr[1] != null) && (arr[2] == '' || arr[2] == null)) {
 			
-			URL = `http://www.omdbapi.com/?apikey=d756e06d&i=${arr[1]}`;
+			URL = `https://www.omdbapi.com/?apikey=d756e06d&i=${arr[1]}`;
 			console.log(URL);
 			getMoviesById(URL);
 
@@ -58,25 +58,25 @@ $(document).ready(() => {
 
 		} else if((arr[0] == '' || arr[0] == null) && (arr[1] != '' || arr[1] != null) && (arr[2] != '' || arr[2] != null)) {
 			
-			URL = `http://www.omdbapi.com/?apikey=d756e06d&i=${arr[1]}&y=${arr[2]}`;
+			URL = `https://www.omdbapi.com/?apikey=d756e06d&i=${arr[1]}&y=${arr[2]}`;
 			console.log(URL);
 			getMoviesById(URL);
 
 		} else if((arr[0] != '' || arr[0] != null) && (arr[1] == '' || arr[1] == null) && (arr[2] != '' || arr[2] != null)) {
 			
-			URL = `http://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}&y=${arr[2]}`;
+			URL = `https://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}&y=${arr[2]}`;
 			console.log(URL);
 			getMoviesByTitle(URL);
 
 		} else if((arr[0] != '' || arr[0] != null) && (arr[1] != '' || arr[1] != null) && (arr[2] == '' || arr[2] == null)) {
 			
-			URL = `http://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}&i=${arr[1]}`;
+			URL = `https://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}&i=${arr[1]}`;
 			console.log(URL);
 			getMoviesByTitle(URL);
 
 		} else if((arr[0] != '' || arr[0] != null) && (arr[1] != '' || arr[1] != null) && (arr[2] != '' || arr[2] != null)) {
 			
-			URL = `http://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}&i=${arr[1]}&y=${arr[2]}`;
+			URL = `https://www.omdbapi.com/?apikey=d756e06d&s=${arr[0]}&i=${arr[1]}&y=${arr[2]}`;
 			console.log(URL);
 			getMoviesByTitle(URL);
 
@@ -85,9 +85,7 @@ $(document).ready(() => {
 			console.log("Please enter a valid input");
 			$('#warningAlert').fadeIn(500);
 			
-		}
-
-		
+		}		
 	})
 });
 
@@ -182,7 +180,7 @@ $(document).ready(() => {
 		$.ajax({
 			type: 'GET',
 			datatype: 'json',
-			url: 'http://www.omdbapi.com/?apikey=d756e06d&i=' + id,
+			url: 'https://www.omdbapi.com/?apikey=d756e06d&i=' + id,
 			async: true,
 			success: (response) => {
 
@@ -210,7 +208,7 @@ $(document).ready(() => {
 							            <div class="col">						              
 							              <hr>
 							              <div class="d-flex justify-content-around" id="modalFooter">
-							              	<a id="footerLink" href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">Go To IMDB</a>
+							              	<a id="footerLink" href="https://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">Go To IMDB</a>
 							              	<a id="footerLinkTwo" href="index.html" class="btn btn-success">Home</a>
 							              </div>						              
 							            </div>
