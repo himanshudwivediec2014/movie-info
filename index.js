@@ -121,7 +121,7 @@ $(document).ready(() => {
 						$('#warning').fadeIn(500);
 					}
 			},
-			error: (err) => {
+			error: (error) => {
 	            alert("Some error occured !! Please refresh the page.")
 	        },
 			timeout: 3000
@@ -218,8 +218,8 @@ $(document).ready(() => {
 							      `
 					$('#modalBody').html(displayMovie);
 			},
-			error: (err) => {
-
+			error: (error) => {
+				alert("Some error occured !! Please refresh the page.")
 			},
 			timeout: 3000
 		});
