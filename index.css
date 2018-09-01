@@ -1,0 +1,230 @@
+:root{
+	font-size: 16px;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+
+/*CSS for Navigation Bar*/
+	#navLogo{
+		height: 10vh; 
+		width: 4.4vw;
+	}
+/*navbar ends*/
+
+
+/*CSS for search area*/
+	#heading{
+		font-size: 2.5rem;
+		text-shadow: 2px 2px 5px grey;
+	}
+
+	.searchClass{
+		transition: all 0.2s ease 0.1s;
+		border-radius: 4vw;
+	}
+	#searchButton{
+		transition: all 0.4s linear 0.1s;
+	}
+
+	#searchButton:hover{
+		border-radius: 4vw;
+		color: blue;
+		background-color: white;
+	}
+	#warningAlert{
+		margin-bottom: -8vh;
+		padding-bottom: 0;
+	}
+
+	#warning{
+		padding-bottom: 0;
+		margin-bottom: -8vh;
+	}
+/*CSS for search area ends*/
+
+
+
+/*CSS for the card-deck that displays the results(movies) received*/
+	#moviePoster{
+		height: 60vh;
+		width: 20vw;
+		border-radius: 0.5vw;
+		transition: all 0.4s ease 0.2s;
+	}
+
+	#moviePoster:hover{
+		cursor: pointer;
+		border-radius: 1vw;
+		box-shadow: 8px 8px 20px black;
+	}
+
+	#modalTrigger{
+		transition: all 0.4s ease 0.1s;
+	}
+
+	#modalTrigger:hover{
+		color: blue;
+		background-color: white;
+		border-radius: 4vw;
+	}
+/*CSS for card-deck ends*/
+
+
+
+/*CSS for modal view that displays the selected movie*/
+	#modalDialog{
+		margin-left: 13vw;
+	}
+
+	#selectedImg{
+		transition: all 0.5s ease 0.1s;
+	}
+
+	#selectedImg:hover{
+		box-shadow: 15px 15px 20px grey;
+	}
+
+	#footerLink{
+		transition: all 0.4s ease 0.1s;
+	}
+
+	#footerLink:hover{
+		color: blue;
+		background-color: white;
+		border-radius: 4vw;
+	}
+
+	#footerLinkTwo{
+		width: auto;	
+		transition: all 0.4s ease 0.1s;
+	}
+
+	#footerLinkTwo:hover{
+		color: green;
+		background-color: white;
+		border-radius: 4vw;
+	}
+/*CSS for modal ends*/
+
+
+
+						/*xs*/
+
+/*media query for xs screens(<449px)*/						
+	@media only screen and (max-width: 449px) {
+		
+		#navLogo{
+			height: 10vh; 
+			width: 15vw;
+		}
+
+		#heading{
+			font-size: 2rem;
+		}
+
+		#cardHeading{
+			height: 15vh;
+		}
+
+		#moviePoster{
+			width: 70vw;
+			height: 68vh;
+		}
+
+		#selectedImg{
+			width: 65vw;
+			height: 60vh;
+		}
+
+		#modalFooter{
+			display: flex;
+			flex-direction: column;
+		}
+		#footerLink{
+			margin-bottom: 1vh;
+		}
+	}
+/*xs media query ends*/
+
+
+						/*xs*/
+
+/*media query for xs screens(450px to 575px)*/						
+	@media only screen and (min-width: 450px) and (max-width: 575px) {
+
+		#navLogo{
+			height: 10vh; 
+			width: 11vw;
+		}
+
+		#heading{
+			font-size: 2rem;
+		}
+
+
+		#moviePoster{
+			width: 44vw;
+			height: 65vh;
+		}
+	}
+/*xs media query ends*/
+
+
+								/*sm*/
+
+/*media query for sm screens(576px to 767px)*/	
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+	#navLogo{
+		height: 10vh; 
+		width: 8vw;
+	}
+
+
+	#heading{
+		font-size: 2rem;
+	}
+
+	#moviePoster{
+		width: 35vw;
+		height: 60vh;
+	}
+}
+/*sm media query ends*/
+
+
+								/*md*/
+
+/*media query for md screens(768px to 991px)*/	
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+		#navLogo{
+			height: 10vh; 
+			width: 7vw;
+		}
+
+		#moviePoster{
+			width: 26vw;
+			height: 60vh;
+		}
+	}
+/*md media query ends*/
+
+								/*lg*/
+
+/*media query for lg screens(992px to 1199px)*/	
+	@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+		#moviePoster{
+			width: 20vw;
+			height: 60vh;
+		}
+	}
+/*lg media query ends*/				
+				
+								/*>=1200px XL*/

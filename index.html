@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+			<!-- CSS file -->
+	
+
+	<!-- Additional CSS Themes file - not required-->
+	<!-- <link rel="stylesheet" href="EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css">  -->
+
+
+	
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>Movie Search</title>
+</head>
+<body style="background-color:grey;height:100%;">
+
+	<!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		
+			<a class="navbar-brand" href="index.html">
+				<img id="navLogo" src="omdb.png" class="img-thumbnail rounded">
+			</a>
+			<h4>
+				<b>Movie DB</b>
+			</h4>
+
+		</nav>
+	<!-- Navigation Bar ends -->	
+
+
+
+		<!-- Search Area -->
+	<div class="container-fluid mt-5">
+		<div class="jumbotron" style="border-radius: 1vw;">
+			<div class="row">
+				<div class="col text-center">
+					<h2 id="heading" class="mb-4">Search For Any Movie</h2>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col" id="searchColumn">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-4 col-12 mb-3">
+							<form class="form-inline justify-content-center" id="searchByTitle">
+				  				<input type="text" class="form-control pb-2" id="searchText" placeholder="search by Movie Title..." title="search by Movie Title" style="width: 100%;">		
+							</form>
+						</div>			
+						<div class="col-md-4 col-12 mb-3">
+							<form class="form-inline justify-content-center" id="searchById">
+				  				<input type="text" class="form-control pb-2" id="searchId" placeholder="search by Movie ID..." title="search by Movie ID" style="width: 100%;">		
+							</form>
+						</div>
+						<div class="col-md-4 col-12 mb-3">
+							<form class="form-inline justify-content-center" id="searchByYear">
+				  				<input type="text" class="form-control pb-2" id="searchYear" placeholder="search by Year..." title="search by Year Of Release" style="width: 100%;">		
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col d-flex justify-content-center">
+							<button id="searchButton" class="btn btn-primary mt-3">Search</button>				
+						</div>
+					</div>
+					<div class="row d-flex justify-content-center mt-3">
+						<div id="warningAlert" class="col alert alert-warning text-center" role="alert">
+							<p id="para"><span><i class="far fa-frown"></i></span>   Enter a valid Movie Title or IMDB ID or both along with the Year !!</p>
+						</div>
+					</div>
+					<div class="row d-flex justify-content-center">
+						<div id="warning" class="col alert alert-danger text-center" role="alert">
+							<p><span><i class="far fa-frown"></i></span>   Please enter a valid search criteria !!</p>
+						</div>
+					</div>										
+				</div>
+			</div>
+		</div>
+		
+		<!-- Search Area ends -->
+
+
+		<!-- Card-Deck to display the results recieved -->
+		<div id="movies" class="row">
+			<div class="col" id="cardContainer">
+				<div class="card-deck d-flex justify-content-center" id="moviesCard"></div>		
+			</div>
+		</div>
+		<!-- Card-Deck ends -->
+
+
+		
+		<!-- modal to display the selected movie details-->
+		<div class="row">
+			<div class="col">
+				<div class="modal fade" id="modalView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" id="modalDialog" role="document">
+						<div class="modal-content" style="width: 75vw;">
+						    <div class="modal-header" style="background-color: #E8EAEA;">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							      	<span aria-hidden="true">&times;</span>
+							    </button>
+						    </div>
+
+						    <div class="modal-body" id="modalBody" style="background-color: #E8EAEA;"></div>
+						    
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<!-- modal ends -->
+	</div>
+
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+							<!-- JS file -->
+		
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
+
